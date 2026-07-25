@@ -31,7 +31,7 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.MapControllers();
-app.MapHub<SeaBattleHub>("/hubs/sea-battle");
+app.MapHub<SeaBattleHub>("/ship-hubs/sea-battle");
 app.MapHealthChecks("/health");
 app.MapFallbackToFile("index.html");
 
