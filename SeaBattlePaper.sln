@@ -26,14 +26,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		AGENTS.MD = AGENTS.MD
-		Caddyfile = Caddyfile
 		Directory.Build.props = Directory.Build.props
 		Directory.Packages.props = Directory.Packages.props
-		docker-compose.yml = docker-compose.yml
 		Dockerfile = Dockerfile
 		GitVersion.yml = GitVersion.yml
 		NuGet.config = NuGet.config
 		README.md = README.md
+		docker-compose.ship-app.yml = docker-compose.ship-app.yml
+		docker-compose.ship-db.yml = docker-compose.ship-db.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaBattlePaper.Contracts", "src\SeaBattlePaper.Contracts\SeaBattlePaper.Contracts.csproj", "{9DEFE9B8-CEB9-4F1B-8319-E076800B66A3}"

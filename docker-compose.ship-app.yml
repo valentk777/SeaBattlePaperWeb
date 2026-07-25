@@ -9,10 +9,10 @@ services:
     ports:
       - "127.0.0.1:9988:80"
     restart: unless-stopped
-    networks:
-      - seabattle
+    # networks:
+    #   - seabattle
 
-networks:
-  seabattle:
-    external: true
-    name: seabattle
+# networks:
+#   seabattle:
+#     external: true
+#     name: seabattle

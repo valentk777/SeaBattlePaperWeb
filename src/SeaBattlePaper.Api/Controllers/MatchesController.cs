@@ -6,7 +6,7 @@ using SeaBattlePaper.Contracts.Matches;
 namespace SeaBattlePaper.Api.Controllers;
 
 [ApiController]
-[Route("api/matches")]
+[Route("ship-api/matches")]
 public sealed class MatchesController(SeaBattleService seaBattleService) : ControllerBase
 {
     [HttpPost]

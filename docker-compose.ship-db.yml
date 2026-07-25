@@ -16,13 +16,13 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-    networks:
-      - seabattle
+    # networks:
+    #   - seabattle
 
 volumes:
   seabattle_app_postgres_data:
 
-networks:
-  seabattle:
-    external: true
-    name: seabattle
+# networks:
+#   seabattle:
+#     external: true
+#     name: seabattle

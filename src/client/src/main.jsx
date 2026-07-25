@@ -280,7 +280,8 @@ function SetupPage() {
     setIsStarting(true);
     setError('');
     try {
-      const response = await fetch('/api/matches', {
+    //   const response = await fetch('/sea-battle-paper/api/matches', {
+      const response = await fetch('/ship-api/matches', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ mode: tab, revealSunkShips }),
@@ -1116,6 +1117,7 @@ function PrivacyPage() {
 
 function App() {
   return (
+    // <BrowserRouter basename="/sea-battle-paper">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SetupPage />} />
