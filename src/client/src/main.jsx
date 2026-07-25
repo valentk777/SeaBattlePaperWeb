@@ -390,7 +390,7 @@ function useSeaBattleConnection(matchId) {
   useEffect(() => {
     let disposed = false;
     const connection = new HubConnectionBuilder()
-      .withUrl('/ship-hubs/sea-battle')
+      .withUrl('/sea-battle-paper/ship-hubs/sea-battle')
       .withAutomaticReconnect()
       .configureLogging(LogLevel.Warning)
       .build();
