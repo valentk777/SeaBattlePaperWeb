@@ -1117,8 +1117,8 @@ function PrivacyPage() {
 
 function App() {
   return (
-    // <BrowserRouter basename="/sea-battle-paper">
-    <BrowserRouter>
+    <BrowserRouter basename="/sea-battle-paper">
+    {/* <BrowserRouter> */}
       <Routes>
         <Route path="/" element={<SetupPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />

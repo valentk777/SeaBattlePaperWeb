@@ -35,10 +35,3 @@ app.MapHealthChecks("/health");
 app.MapFallbackToFile("index.html");
 
 await app.RunAsync();
-
-public partial class Program
-{
-    protected Program()
-    {
-    }
-}
