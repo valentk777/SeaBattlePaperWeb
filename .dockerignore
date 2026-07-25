@@ -1,0 +1,17 @@
+**/bin
+**/obj
+**/node_modules
+**/dist
+**/wwwroot
+.agents
+.codex
+.git
+.github
+.idea
+.vscode
+.env
+.env.*
+!.env.example
+OLD
+test
+*.binlog

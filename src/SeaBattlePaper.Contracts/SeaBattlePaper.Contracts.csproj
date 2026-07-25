@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <ProjectReference Include="..\SeaBattlePaper.Domain\SeaBattlePaper.Domain.csproj"/>
+    </ItemGroup>
+</Project>

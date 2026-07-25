@@ -1,0 +1,37 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore SeaBattlePaper.sln
+
+      - name: Build
+        run: dotnet build -c Release --no-restore SeaBattlePaper.sln
+
+      - name: Test
+        id: run-tests
+        run: dotnet test SeaBattlePaper.sln -c Release --no-build

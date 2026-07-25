@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SeaBattlePaper.Application\SeaBattlePaper.Application.csproj"/>
+        <ProjectReference Include="..\SeaBattlePaper.Domain\SeaBattlePaper.Domain.csproj"/>
+    </ItemGroup>
+
+</Project>

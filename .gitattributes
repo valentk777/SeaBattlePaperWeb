@@ -1,0 +1,112 @@
+# =====================================
+# Global line ending normalization
+# =====================================
+# Store everything as LF in repo
+* text=auto eol=lf
+
+# =====================================
+# Windows-specific files
+# =====================================
+*.sln           text eol=crlf
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+
+# =====================================
+# Unix / Docker scripts
+# =====================================
+*.sh            text eol=lf
+Dockerfile      text eol=lf
+*.dockerfile   text eol=lf
+
+# =====================================
+# .NET / C#
+# =====================================
+*.cs            text diff=csharp
+*.csx           text diff=csharp
+*.fs            text
+*.vb            text
+
+*.csproj        text
+*.fsproj        text
+*.vbproj        text
+*.props         text
+*.targets       text
+*.sln.DotSettings text
+
+*.config        text
+*.xml           text
+*.json          text
+*.editorconfig  text
+
+# NuGet
+*.nupkg         binary
+*.snupkg        binary
+packages.lock.json text
+
+# =====================================
+# Angular / Frontend
+# =====================================
+*.ts            text
+*.tsx           text
+*.js            text
+*.jsx           text
+*.mjs           text
+
+*.html          text
+*.css           text
+*.scss          text
+*.sass          text
+*.less          text
+
+# Angular / Node configs
+*.json          text
+*.yml           text
+*.yaml          text
+*.env           text
+
+# Lock files (important for Docker builds)
+package-lock.json text
+npm-shrinkwrap.json text
+yarn.lock text
+pnpm-lock.yaml text
+
+# =====================================
+# Documentation
+# =====================================
+*.md            text
+*.txt           text
+
+# =====================================
+# Images
+# =====================================
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.ico           binary
+*.bmp           binary
+*.webp          binary
+*.svg           text
+
+# =====================================
+# Fonts
+# =====================================
+*.ttf           binary
+*.otf           binary
+*.woff          binary
+*.woff2         binary
+
+# =====================================
+# Archives
+# =====================================
+*.zip           binary
+*.7z            binary
+*.rar           binary
+
+# =====================================
+# Build outputs (binary, no diff)
+# =====================================
+*.dll           binary
+*.exe           binary
+*.pdb           binary

@@ -1,0 +1,47 @@
+services:
+  app:
+    image: ${IMAGE_NAME:-ghcr.io/valentk777/sea-battle-paper-web}:${IMAGE_TAG:-latest}
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://0.0.0.0:8080
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=${POSTGRES_DB:-sea_battle_paper};Username=${POSTGRES_USER:-sea_battle_paper};Password=${POSTGRES_PASSWORD:-change-me}
+      OpenTelemetry__Enabled: ${OPEN_TELEMETRY_ENABLED:-true}
+      OpenTelemetry__ServiceName: SeaBattlePaper.Api
+      OpenTelemetry__SampleRatio: ${OPEN_TELEMETRY_SAMPLE_RATIO:-0.2}
+      OpenTelemetry__OtlpEndpoint: ${OPEN_TELEMETRY_OTLP_ENDPOINT:-http://host.docker.internal:4317}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-sea_battle_paper}
+      POSTGRES_USER: ${POSTGRES_USER:-sea_battle_paper}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change-me}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-sea_battle_paper} -d ${POSTGRES_DB:-sea_battle_paper}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2.8-alpine
+    ports:
+      - "${WEB_PORT:-18080}:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    depends_on:
+      - app
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

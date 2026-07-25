@@ -1,0 +1,88 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaBattlePaper.Api", "src\SeaBattlePaper.Api\SeaBattlePaper.Api.csproj", "{F21C3F1C-181D-4F44-AB74-12D19A9E68CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaBattlePaper.Domain", "src\SeaBattlePaper.Domain\SeaBattlePaper.Domain.csproj", "{6A3B7AEC-5B0A-4BC2-B921-16C34F809C3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaBattlePaper.Infrastructure", "src\SeaBattlePaper.Infrastructure\SeaBattlePaper.Infrastructure.csproj", "{7919BF1D-3840-47C8-9136-A93F511CC3A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaBattlePaper.IntegrationTests", "test\SeaBattlePaper.IntegrationTests\SeaBattlePaper.IntegrationTests.csproj", "{468FE966-E018-4F25-A469-DBACCDA7BDB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaBattlePaper.UnitTests", "test\SeaBattlePaper.UnitTests\SeaBattlePaper.UnitTests.csproj", "{960CBF73-D55F-4325-B2DD-46D0F5D45F51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{2BD137D5-4FCD-48BC-B8AB-A21845A85ADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaBattlePaper.Application", "src\SeaBattlePaper.Application\SeaBattlePaper.Application.csproj", "{60671A11-E0C9-49F9-84E1-ACA4361631C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F456F7FD-370D-425A-A2E2-D65779517299}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9B74FC48-1B10-4AEE-BC3C-E721BCDA3D55}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.editorconfig = .editorconfig
+		.env.example = .env.example
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		AGENTS.MD = AGENTS.MD
+		Caddyfile = Caddyfile
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		GitVersion.yml = GitVersion.yml
+		NuGet.config = NuGet.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeaBattlePaper.Contracts", "src\SeaBattlePaper.Contracts\SeaBattlePaper.Contracts.csproj", "{9DEFE9B8-CEB9-4F1B-8319-E076800B66A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F21C3F1C-181D-4F44-AB74-12D19A9E68CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21C3F1C-181D-4F44-AB74-12D19A9E68CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21C3F1C-181D-4F44-AB74-12D19A9E68CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21C3F1C-181D-4F44-AB74-12D19A9E68CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A3B7AEC-5B0A-4BC2-B921-16C34F809C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3B7AEC-5B0A-4BC2-B921-16C34F809C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3B7AEC-5B0A-4BC2-B921-16C34F809C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3B7AEC-5B0A-4BC2-B921-16C34F809C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7919BF1D-3840-47C8-9136-A93F511CC3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7919BF1D-3840-47C8-9136-A93F511CC3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7919BF1D-3840-47C8-9136-A93F511CC3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7919BF1D-3840-47C8-9136-A93F511CC3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468FE966-E018-4F25-A469-DBACCDA7BDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468FE966-E018-4F25-A469-DBACCDA7BDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468FE966-E018-4F25-A469-DBACCDA7BDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468FE966-E018-4F25-A469-DBACCDA7BDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{960CBF73-D55F-4325-B2DD-46D0F5D45F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{960CBF73-D55F-4325-B2DD-46D0F5D45F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{960CBF73-D55F-4325-B2DD-46D0F5D45F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{960CBF73-D55F-4325-B2DD-46D0F5D45F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60671A11-E0C9-49F9-84E1-ACA4361631C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60671A11-E0C9-49F9-84E1-ACA4361631C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60671A11-E0C9-49F9-84E1-ACA4361631C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60671A11-E0C9-49F9-84E1-ACA4361631C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DEFE9B8-CEB9-4F1B-8319-E076800B66A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEFE9B8-CEB9-4F1B-8319-E076800B66A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEFE9B8-CEB9-4F1B-8319-E076800B66A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DEFE9B8-CEB9-4F1B-8319-E076800B66A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6A3B7AEC-5B0A-4BC2-B921-16C34F809C3F} = {2BD137D5-4FCD-48BC-B8AB-A21845A85ADE}
+		{7919BF1D-3840-47C8-9136-A93F511CC3A4} = {2BD137D5-4FCD-48BC-B8AB-A21845A85ADE}
+		{F21C3F1C-181D-4F44-AB74-12D19A9E68CD} = {2BD137D5-4FCD-48BC-B8AB-A21845A85ADE}
+		{60671A11-E0C9-49F9-84E1-ACA4361631C4} = {2BD137D5-4FCD-48BC-B8AB-A21845A85ADE}
+		{468FE966-E018-4F25-A469-DBACCDA7BDB7} = {F456F7FD-370D-425A-A2E2-D65779517299}
+		{960CBF73-D55F-4325-B2DD-46D0F5D45F51} = {F456F7FD-370D-425A-A2E2-D65779517299}
+		{9DEFE9B8-CEB9-4F1B-8319-E076800B66A3} = {2BD137D5-4FCD-48BC-B8AB-A21845A85ADE}
+	EndGlobalSection
+EndGlobal

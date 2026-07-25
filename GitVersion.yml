@@ -1,0 +1,16 @@
+next-version: 0.1.0
+
+commit-message-incrementing: Enabled
+major-version-bump-message: '^major:'
+minor-version-bump-message: '^feat:'
+patch-version-bump-message: '^fix:'
+
+branches:
+  main:
+    regex: ^main$
+    is-main-branch: true
+    increment: Patch
+  feature:
+    regex: ^(feature|feat)/
+    increment: Inherit
+    label: alpha

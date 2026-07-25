@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\SeaBattlePaper.Contracts\SeaBattlePaper.Contracts.csproj"/>
+        <ProjectReference Include="..\SeaBattlePaper.Domain\SeaBattlePaper.Domain.csproj"/>
+    </ItemGroup>
+</Project>
