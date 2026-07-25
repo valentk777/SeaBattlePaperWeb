@@ -19,6 +19,7 @@ builder.Services.AddHealthChecks();
 builder.AddApiObservability();
 
 var app = builder.Build();
+app.UsePathBase("/sea-battle-paper");
 
 await using (var scope = app.Services.CreateAsyncScope())
 {
