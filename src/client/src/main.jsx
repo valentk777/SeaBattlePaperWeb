@@ -503,7 +503,7 @@ function LobbyView({ matchId, state, join, error, invoke }) {
   }, [fleet]);
   const fleetError = validateFleet(fleet, state.mode);
   const visibleFleetError = fleetError === 'Place the full classic fleet first.' ? null : fleetError;
-  const inviteUrl = `${window.location.origin}/match/${matchId}/lobby`;
+  const inviteUrl = `${window.location.origin}/sea-battle-paper/match/${matchId}/lobby`;
 
   async function copyInviteLink() {
     try {
