@@ -1,0 +1,18 @@
+services:
+  seabattle:
+    image: ${SEABATTLE_IMAGE_NAME:-ghcr.io/valentk777/sea-battle-paper-web}:${SEABATTLE_IMAGE_TAG:-latest}
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://0.0.0.0:8080
+      # VITE_API_BASE: ${KARTUON_ADMIN_API_BASE:-}
+      ConnectionStrings__Default: Host=seabattle-db;Port=5432;Database=${POSTGRES_DB:-sea_battle_paper};Username=${POSTGRES_USER:-sea_battle_paper};Password=${POSTGRES_PASSWORD:-change-me}
+    ports:
+      - "127.0.0.1:9988:80"
+    restart: unless-stopped
+    networks:
+      - seabattle
+
+networks:
+  seabattle:
+    external: true
+    name: seabattle

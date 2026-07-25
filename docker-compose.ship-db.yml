@@ -1,0 +1,28 @@
+services:
+  seabattle-db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${SEABATTLE_DB_NAME:-sea_battle_paper}
+      POSTGRES_USER: ${SEABATTLE_DB_USER:-sea_battle_paper}
+      POSTGRES_PASSWORD: ${SEABATTLE_DB_PASSWORD:-change-me}
+    ports:
+      - "127.0.0.1:7766:5432"
+    volumes:
+      - seabattle_app_postgres_data:/var/lib/postgresql
+    healthcheck:
+      test:
+        [ "CMD-SHELL", "pg_isready -U ${DB_USER:-sea_battle_paper} -d ${DB_NAME:-sea_battle_paper}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - seabattle
+
+volumes:
+  seabattle_app_postgres_data:
+
+networks:
+  seabattle:
+    external: true
+    name: seabattle
