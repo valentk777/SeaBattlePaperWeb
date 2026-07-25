@@ -386,13 +386,14 @@ function useSeaBattleConnection(matchId) {
   const [join, setJoin] = useState(null);
   const [error, setError] = useState('');
   const connectionRef = useRef(null);
+  const hubUrl = `${import.meta.env.BASE_URL}ship-hubs/sea-battle`;
 
   useEffect(() => {
     let disposed = false;
     const connection = new HubConnectionBuilder()
-      .withUrl('/sea-battle-paper/ship-hubs/sea-battle')
+      .withUrl(hubUrl)
       .withAutomaticReconnect()
-      .configureLogging(LogLevel.Warning)
+      .configureLogging(LogLevel.Debug)
       .build();
     connectionRef.current = connection;
 

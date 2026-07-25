@@ -7,14 +7,14 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      "/api": {
+      "/sea-battle-paper/ship-api": {
         target: "http://localhost:5077",
         changeOrigin: true
       },
-      "/hubs": {
+      "/sea-battle-paper/ship-hubs": {
         target: "http://localhost:5077",
-        ws: true,
-        changeOrigin: true
+        changeOrigin: true,
+        ws: true
       }
     }
   },
